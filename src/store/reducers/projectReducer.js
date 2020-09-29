@@ -1,3 +1,5 @@
+import { toast } from 'react-toastify';
+
 const initState = {
   projects: [
     {id: '1', title: 'help me find peach', content: 'blah blah blah'},
@@ -9,7 +11,10 @@ const initState = {
 const projectReducer = (state = initState, action) => {
   switch (action.type) {
     case 'CREATE_PROJECT':
-      console.log('project created', action.project);
+      toast.success("Project added...")
+      return state;
+    case 'CREATE_PROJECT_ERR':
+      toast.error('An error occurred!');
       return state;
     default:
       return state;
