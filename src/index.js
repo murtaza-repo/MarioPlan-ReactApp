@@ -14,9 +14,14 @@ import { isLoaded } from 'react-redux-firebase';
 
 const store = createStore(rootReducer, applyMiddleware(thunk.withExtraArgument({getFirebase})));
 
+const rrfConfig = {
+  userProfile: 'users',
+  useFirestoreForProfile: true // Firestore for Profile instead of Realtime DB
+}
+
 const rrfProps = {
   firebase,
-  config: {},
+  config: rrfConfig,
   dispatch: store.dispatch,
   createFirestoreInstance
 }

@@ -26,3 +26,25 @@ export const signOut = () => {
             });
     };
 };
+
+export const signUp = (creds) => {
+    return (dispatch, getState, { getFirebase }) => {
+        const firebase = getFirebase();
+        const firestore = getFirebase().firestore();
+
+        firebase
+            .auth()
+            .createUserWithEmailAndPassword(creds.email, creds.password)
+            .then((response) => {
+                return firestore.collection('users').doc(response.user.uid).set({
+                    firstName: creds.firstName,
+                    lastName: creds.lastName,
+                    initials: creds.firstName[0] + creds.lastName[0]
+                })
+            }).then(() => {
+                dispatch({type: 'SIGNUP_SUCCESS'})
+            }).catch((err) => {
+                dispatch({type: 'SIGNUP_ERROR', err})
+            })
+    }
+}

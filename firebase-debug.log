@@ -1,0 +1,20 @@
+[debug] [2020-10-01T11:54:42.662Z] ----------------------------------------------------------------------
+[debug] [2020-10-01T11:54:42.693Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2020-10-01T11:54:42.695Z] CLI Version:   8.11.2
+[debug] [2020-10-01T11:54:42.695Z] Platform:      linux
+[debug] [2020-10-01T11:54:42.695Z] Node Version:  v10.19.0
+[debug] [2020-10-01T11:54:42.696Z] Time:          Thu Oct 01 2020 17:24:42 GMT+0530 (India Standard Time)
+[debug] [2020-10-01T11:54:42.697Z] ----------------------------------------------------------------------
+[debug] [2020-10-01T11:54:42.697Z] 
+[debug] [2020-10-01T11:54:42.743Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-10-01T11:54:42.744Z] > authorizing via signed-in user
+[debug] [2020-10-01T11:54:42.744Z] [iam] checking project marioplan-53 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-10-01T11:54:42.753Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/marioplan-53:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-10-01T11:54:44.711Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 01 Oct 2020 11:54:44 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1137","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-10-01T11:54:44.718Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/marioplan-53/serviceAccounts/marioplan-53@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2020-10-01T11:54:46.602Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 01 Oct 2020 11:54:46 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-10-01T11:54:46.606Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/marioplan-53  
+ 
+[debug] [2020-10-01T11:54:47.562Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 01 Oct 2020 11:54:47 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}

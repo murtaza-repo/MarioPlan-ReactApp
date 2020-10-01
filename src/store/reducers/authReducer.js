@@ -10,22 +10,37 @@ const authReducer = (state = initState, action) => {
       toast.error("Login failed! Try again...")
       return {
         ...state,
-        authError: 'Login failed'
+        authError: action.err.message
       };
 
     case 'LOGIN_SUCCESS':
-        toast.success('Logged in successfully...')
+        toast.success('Welcome back...')
         return {
           ...state,
           authError: null
         };
 
     case 'LOGOUT_SUCCESS':
-      toast.warning('Logged out successfully...')
+      toast.warning('Logged out!')
       return {
         ...state,
         authError: null
       };
+
+    case 'SIGNUP_SUCCESS':
+      toast.success('Welcome...')
+      return {
+        ...state,
+        authError: null
+      };
+    
+    case 'SIGNUP_ERROR':
+      toast.error("Something went wrong! Try again...")
+      return {
+        ...state,
+        authError: action.err.message
+      };
+
 
     default:
       return state;
